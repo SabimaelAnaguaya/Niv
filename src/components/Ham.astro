@@ -1,0 +1,79 @@
+---
+
+---
+
+<div id="lines">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+
+
+<style>  
+    #lines{
+      height: 40%;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items:center;
+      cursor:pointer;
+      position:relative;
+      row-gap: 0.65rem;
+      z-index: 100;
+  
+    }
+  
+    #lines span{
+      width: 100%;
+      height: 0.65rem;
+      background: black;
+      border-radius: 3px;
+      transition: transform 0.75s ease;
+    }
+  
+    .line.active:nth-child(1){
+      position:absolute;
+      transform: rotate(135deg); 
+    }
+    .line.active:nth-child(2){
+      position:absolute;
+      transform: scale(0); 
+    }
+    .line.active:nth-child(3){
+      position:absolute;
+      transform: rotate(-135deg); 
+    }
+  
+    
+  
+    @media (width >= 768px) {
+      #lines{
+        display: none;
+      }
+      
+    }
+  </style>
+  
+
+  <script client:load>
+
+    
+
+    const $btnHam = document.getElementById('lines'),
+          $lineas = document.querySelectorAll('.line'),
+          $navbar = document.getElementById('navbar');
+
+    document.addEventListener('click', (e) =>{
+
+      if(e.target === $btnHam || e.target.matches('.line') || e.target.matches('.btn-link')){
+        $lineas.forEach(line => {line.classList.toggle('active')});
+        $navbar.classList.toggle('active')
+      }    
+      
+    })
+    
+    
+  </script>
+  
