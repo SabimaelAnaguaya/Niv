@@ -1,12 +1,11 @@
 ---
 import Ham from "./Ham.astro"
+import Logo from "./Logo.astro"
 ---
 
 <header>
   <nav>
-    <div class="logo">
-      <img src="/public/assets/Logo.png" alt="Logo">
-    </div>
+    <Logo/>
     <ul id="navmenu">
       <li><a href="/">Inicio</a></li>
       <li><a href="">Cursos</a></li>
@@ -18,15 +17,11 @@ import Ham from "./Ham.astro"
 
 <style>
   header{
-    max-width: 100%;
+    width: 100%;
     height: 8rem;
-  }
-
-  .logo{
-    height: 100%;
-    & img{
-      height: 100%;
-    }
+    position: fixed;
+    top:0;
+    z-index: 99;
   }
   
   nav{
@@ -52,7 +47,6 @@ import Ham from "./Ham.astro"
     transition: all 0.5s ease-in-out;
     margin-inline: auto;
     display: flex;
-    flex-wrap: wrap;
     gap: 12 px;
     align-content: center;
     flex-direction: column;
@@ -70,7 +64,7 @@ import Ham from "./Ham.astro"
     }
 
     & a:hover{
-      background-color: pink;
+      background-color: burlywood;
     }
   }
 
@@ -83,7 +77,14 @@ import Ham from "./Ham.astro"
   @media (min-width: 768px) {
     nav ul{
       display: flex;
+      flex-direction: row;
       position: relative;
+      height: fit-content;
+      justify-content: end;
+      background-color: none;
+      left: 0;
+      transition: none;
+      gap: 8px;
     }
   }
 

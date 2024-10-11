@@ -6,9 +6,16 @@ import cursos from "../assets/data_courses.json"
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
 
+    <CardSlider src="./public/assets/Fondohero.jpg" title="Cursos Pre Universitarios"
+                desc="Estudia con los mejores profesionales y aprueba tu examen de admisión"/>
+
     {
       cursos.cursos.map((curso) =>(
-          <CardSlider src={curso.imagenFondo} />
+          <CardSlider 
+            src={curso.imagenFondo}
+            title={curso.titulo} 
+            dat_start={curso.fechaInicio}
+          />
       ))
     }
     
@@ -23,12 +30,13 @@ import cursos from "../assets/data_courses.json"
 
 <style>
   .swiper {
-  max-width: 80%;
-  height: 80dvh;
-  border-radius: 15px;
+    max-width: 80%;
+    height: 80dvh;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 1px #565656b7;
-}
+    margin-top: 10rem;
+  }
 </style>
 
 <script type="module" src="/src/js/swiper_hero.js"></script>
