@@ -56,24 +56,3 @@
     }
   </style>
   
-
-  <script client:load>
-
-    
-
-    const $btnHam = document.getElementById('lines'),
-          $lineas = document.querySelectorAll('.line'),
-          $navbar = document.getElementById('navbar');
-
-    document.addEventListener('click', (e) =>{
-
-      if(e.target === $btnHam || e.target.matches('.line') || e.target.matches('.btn-link')){
-        $lineas.forEach(line => {line.classList.toggle('active')});
-        $navbar.classList.toggle('active')
-      }    
-      
-    })
-    
-    
-  </script>
-  

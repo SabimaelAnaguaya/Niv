@@ -1,0 +1,34 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "titulo": "Curso de Matemáticas Avanzadas",
+      "descripcion": "Prepárate para los exámenes universitarios con nuestro curso intensivo de matemáticas avanzadas.",
+      "fechaInicio": "2024-01-15",
+      "fechaFin": "2024-04-15",
+      "precio": 250,
+      "duracion": "3 meses",
+      "imagenFondo": "https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      "id": 2,
+      "titulo": "Curso de Física",
+      "descripcion": "Entiende los conceptos fundamentales de la física y prepárate para tus exámenes.",
+      "fechaInicio": "2024-02-01",
+      "fechaFin": "2024-05-01",
+      "precio": 200,
+      "duracion": "3 meses",
+      "imagenFondo": "https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      "id": 3,
+      "titulo": "Curso de Química",
+      "descripcion": "Aprende química de manera práctica y teórica para tus exámenes.",
+      "fechaInicio": "2024-03-01",
+      "fechaFin": "2024-06-01",
+      "precio": 220,
+      "duracion": "3 meses",
+      "imagenFondo": "https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=800"
+    }
+  ]
+}

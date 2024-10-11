@@ -1,120 +1,37 @@
 ---
 import CardSlider from "./CardSlider.astro"
-
-let id = 0
-
-function genId () {
-  id += 1;
-  return `cr-${id}`
-}
+import cursos from "../assets/data_courses.json"
 ---
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
 
-<div class="slider-content">
+    {
+      cursos.cursos.map((curso) =>(
+          <CardSlider src={curso.imagenFondo} />
+      ))
+    }
+    
+  </div>
+  
+  <div class="swiper-pagination"></div>
 
-  <CardSlider id={genId()} />
-  <CardSlider id={genId()}/>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
 </div>
 
-<script client:load>
-  let checked = document.querySelectorAll("input[name=a]")
-  checked[0].checked = true 
-</script>
-
 <style>
-  .slider-content {
+  .swiper {
   max-width: 80%;
-  margin: 0 auto;
-  height: 80vh;
-  border-radius: 12px;
-  box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
-  position: relative;
-  overflow: hidden;
-  background: hsl(0 0% 90%);
-
+  height: 80dvh;
+  border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 1px #565656b7;
 }
-
-.ci {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  
-  transform-origin: left 50%;
-
-  background: inherit;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z);
-  transition: .3s ease-out;
-}
-
-.ci img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.ch {
-  position: absolute;
-  top: 70%;
-  left: 4%;
-  transform: translateY(-50%);
-
-  font-size: 2rem;
-  color: hsla(var(--h) var(--s) var(--l) / .8);
-  text-shadow: 0 2px 10px hsla(var(--h) var(--s) 10% / .3);
-}
-
-input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  z-index: -10;
-}
-
-label {
-  width: 10%;
-  height: 10px;
-  margin-right: 4px;
-  border-radius: 20px;
-
-  background: hsla(0 0% 90% / .3);
-  cursor: pointer;
-
-  position: relative;
-  z-index: 10;
-}
-
-label:last-child {
-  margin-right: 0;
-}
-
-input:checked+label {
-  background: linear-gradient(to right,
-    hsla(var(--hue) 80% 70% / .7),
-    hsla(calc(var(--hue) + 30) 80% 50% / .7));
-}
-
-input:not(:checked)+label+.ci {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-input:checked+label+.ci~.ci {
-  transform: translateX(100%);
-}
-
-input:not(:checked)+label+.ci {
-  transition: 0;
-}
-
 </style>
+
+<script type="module" src="/src/js/swiper_hero.js"></script>
+
+
+
