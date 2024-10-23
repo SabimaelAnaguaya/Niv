@@ -1,8 +1,10 @@
 {
+  
+  
   "cursos": [
     {
       "id": 1,
-      "titulo": "Curso de Matemáticas Avanzadas",
+      "titulo": "Ciencias Económicas",
       "descripcion": "Prepárate para los exámenes universitarios con nuestro curso intensivo de matemáticas avanzadas.",
       "fechaInicio": "15-01-2024",
       "fechaFin": "2024-04-15",
@@ -12,7 +14,7 @@
     },
     {
       "id": 2,
-      "titulo": "Curso de Física",
+      "titulo": "Ingeniería",
       "descripcion": "Entiende los conceptos fundamentales de la física y prepárate para tus exámenes.",
       "fechaInicio": "15-03-2024",
       "fechaFin": "2024-05-01",
@@ -22,8 +24,8 @@
     },
     {
       "id": 3,
-      "titulo": "Curso de Química",
-      "descripcion": "Aprende química de manera práctica y teórica para tus exámenes.",
+      "titulo": "Medicina",
+      "descripcion": "Preparate para el examen de ingreso a medicina, enfermeria de manera práctica y teórica para tus exámenes.",
       "fechaInicio": "01-10-2024",
       "fechaFin": "2024-06-01",
       "precio": 220,

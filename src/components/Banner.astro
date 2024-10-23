@@ -1,0 +1,47 @@
+---
+import BtnCon from "./BtnCon.astro"
+---
+
+<article>
+  <h3>¿Porque Elegirnos?</h3><br/>
+  <p>¡Únete y asegura tu futuro académico con nosotros!</p><br/>
+
+    <ul>
+      <li> <b>✅ Excelencia Académica: </b>  Preparación integral y actualizada para tus exámenes.</li><br/>
+      <li> <b>✅ Docentes Expertos: </b>  Profesores altamente calificados y dedicados a tu éxito.</li><br/>
+      <li> <b>✅ Flexibilidad y Apoyo: </b>  Simulacros de examen finalizando cada parcial.</li><br/>
+      <li> <b>✅ Comunidad Estudiantil: </b>  Red de apoyo y estudio con otros alumnos.</li><br/>
+    </ul>
+  
+    <BtnCon type="dark"/>
+</article>
+
+<style>
+  article{
+    width: 100%;
+    height: fit-content;
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  h3{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  p{
+    font-size: 1.6rem;
+  }
+
+  ul {
+    padding-left: 20px;
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: 768px){
+    
+    article{
+      width: 50%;
+    }
+  }
+</style>

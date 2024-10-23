@@ -3,13 +3,13 @@ import Ham from "./Ham.astro"
 import Logo from "./Logo.astro"
 ---
 
-<header>
+<header id="header">
   <nav>
     <Logo/>
     <ul id="navmenu">
       <li><a href="/">Inicio</a></li>
-      <li><a href="">Cursos</a></li>
-      <li><a href="">Acerca</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#acerca">Acerca</a></li>
     </ul>
     <Ham/>
   </nav>
@@ -21,6 +21,8 @@ import Logo from "./Logo.astro"
     height: 8rem;
     position: fixed;
     top:0;
+    transition: all .5s ease;
+    background-color: transparent;
     z-index: 99;
   }
   
@@ -61,6 +63,7 @@ import Logo from "./Logo.astro"
       padding: 12px 18px;
       font-size: 2rem;
       transition: all 0.75s ease;
+      color: black;
     }
 
     & a:hover{
@@ -85,9 +88,15 @@ import Logo from "./Logo.astro"
       left: 0;
       transition: none;
       gap: 8px;
+      background-color:transparent;
+
+      & a{
+        color: white;
+      }
     }
   }
 
 </style>
 
 <script type="module" src="/src/js/hambutton.js"></script>
+<script type="module" src="/src/js/obsHeader.js"></script>

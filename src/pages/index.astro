@@ -1,12 +1,41 @@
 ---
 import MainLayout from "../layouts/mainLayout.astro"
 import Slider from "../components/Slider.astro"
+import Banner from "../components/Banner.astro"
+import SliderCurs from "../components/SliderCurs.astro"
+import Hero from "../components/Hero.astro"
 
 ---
 
-<MainLayout>
-
-	<Slider></Slider>
+<MainLayout title="Inicio">
+	<Hero/>
 	
+	<section id="cursos" class="section-main">
+		<article id="info-cursos">
+			<SliderCurs />
+			<Banner/>
+
+		</article>
+	</section>
+
+	<section id="acerca" class="section-main">
+		<article></article>
+	</section>
 </MainLayout>
 
+<style>
+	#info-cursos{
+		display: flex;
+		flex-wrap: wrap-reverse;
+		
+		gap: 50px;
+		width: 100%;
+	}
+	
+  @media (min-width: 768px){
+		
+		#curses{
+			flex-wrap: nowrap;
+    }
+  }
+</style>

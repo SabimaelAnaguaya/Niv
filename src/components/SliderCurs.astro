@@ -1,0 +1,39 @@
+---
+import Card from "../components/Card.astro"
+import cursos from "../assets/data_courses.json"
+---
+
+<article class="swiper">
+
+  
+
+  <div class="swiper-wrapper">
+    {cursos.cursos.map((curso)=>(
+      <Card title= {curso.titulo} bg={curso.imagenFondo} description={curso.descripcion}/>
+
+    ))}
+
+  </div>
+
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</article>
+
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+  }
+
+  @media (min-width: 768px){
+    .swiper {
+      width: 50%;
+    }
+  }
+</style>
+
+
+<script type="module" src="/src/js/swiper_hero.js"></script>

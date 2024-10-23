@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --primary-color: #DAC0A3; /* Color del logo */
+  --secondary-color: #EADBC8; /* Un marrón medio para contraste */
+  --accent-color: #FEFAF6; /* Un color acentuado cálido */
+  --background-color: #102C57; /* Fondo claro */
+  --text-color: #333333; /* Texto oscuro para legibilidad */
+
+  --swiper-theme-color: wheat;
+  --title-text: "Merriweather Sans", sans-serif;;
+}
 
 *, 
 *::after, 
@@ -11,8 +21,12 @@
 html{
   font-family: "Inria Sans", sans-Serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: var(--text-color);
 }
-
+body{
+  background-color: var(--accent-color);
+}
 li{
   list-style: none;
   font-family: inherit;
@@ -22,4 +36,21 @@ a{
   text-decoration: none;
   color: inherit;
   margin: 0;
+}
+
+.section-main{
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10% 0;
+
+}
+
+@media (min-width: 768px){
+  .section-main{
+    max-width: 80%;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding-top: 10%;
+  
+  }
 }
